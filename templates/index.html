@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hire Me... please</title>
+        <link rel="icon" href="{{ url_for('static', filename='ico/favicon.ico') }}"/>
+        <link rel="icon" href="{{ url_for('static', filename='ico/favicon-16x16.png') }}" type="image/png" sizes="16x16" />
+        <link rel="icon" href="{{ url_for('static', filename='ico/favicon-32x32.png') }}" type="image/png" sizes="32x32" />
+        <link rel="icon" href="{{ url_for('static', filename='ico/favicon-96x96.png') }}" type="image/png" sizes="96x96" />
+
+        <meta name="description" content="My Personal Programming Portfolio, please have a look around. Enjoy yourself." />
+        <meta name="keywords" content="Portfolio,Looking for Work,Developer"/>
+        <meta name="author" content="Ben Brady" />
+
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link media="screen" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+
+    {% include 'header.html' %}
+
+    {% include 'game.html' %}
+
+    {% include 'links.html' %}
+</html>

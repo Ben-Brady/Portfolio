@@ -1,0 +1,48 @@
+<style>
+    .EventBorder {
+        height: 10vh;
+    }
+
+    .EventDiv {
+        display: flex;
+        align-self: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .EventIMG {
+        position: relative;
+        left: 5px;
+        height: 100%
+    }
+
+    #TopText {
+        margin: auto;
+        width: 80%;
+        object-fit: contain;
+
+    }
+
+    #EventContainer {
+        width: 40vw;
+        height: 20vh;
+        overflow-x: scroll;
+
+        border: 5px solid var(--Text);
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <div id="EventContainer">
+    {%for x in Events%}
+        <div class="EventDiv">
+            <div class="EventBorder">
+                <img class="EventIMG" src="{{x.avatar}}">
+                <a>{{x.repo}}</a>
+                <a>{{x.type}}</a>
+                <a>{{x.message}}</a>
+            </div>
+        </div>
+    {%endfor%}
+    </div>
+</body> 

@@ -1,0 +1,59 @@
+
+<style>
+    .Border {
+        border: 5px solid #fff;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    #Links {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: auto;
+        z-index: 2;
+    }
+
+    #EmailLink,
+    #DocLink,
+    #GithubLink {
+        cursor: pointer;
+        height: calc(40px + 3vw);
+        width: auto;
+        user-select: all;
+    }
+
+    #GithubLink {
+        border-radius: 15%;
+    }
+
+    #DocLink {
+        border-radius: 15%;
+    }
+
+    #EmailLink {
+        border-radius: 15%;
+    }
+</style>
+<body>
+    <div id="Links">
+        <a href="https://github.com/thatgaykid">
+            <img
+                id="GithubLink"
+                class="Border"
+                title="Github"
+                alt="Github"
+                src="{{ url_for('static', filename='images/Github.png') }}"
+            />
+        </a>
+        <a href="mailto:benbradybusiness@gmail.com">
+            <img
+                id="EmailLink"
+                class="Border"
+                title="Mail to Email"
+                alt="Mail to Email"
+                src="{{ url_for('static', filename='images/Email.png') }}"
+            />
+        </a>
+    </div>
+</body>

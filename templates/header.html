@@ -1,0 +1,21 @@
+<head>
+    <script defer type="text/javascript"    src="{{ url_for('static', filename='js/header.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+</head>
+<body>
+    <h1>Ben Brady</h1>
+    <h2 id="TopText">
+        I am a
+        <a id="Age" title="Adaptive Age" ></a>
+        year old developer
+    <br>
+        I code projects in
+        <a id="Python" title="PureImage Repository">Python</a>,
+        <a id="CS" onclick="ShowUnity();">C#</a>
+        <br>
+        I'm currently working on
+        <a id="CurrentProject" href="https://www.github.com/{{Events[0].repo}}">
+            {{Events[0].repo}}
+        </a>
+    </h2>
+</body>

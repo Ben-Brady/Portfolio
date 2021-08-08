@@ -1,0 +1,46 @@
+a,
+h1,
+h2 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    color: #fff;
+
+    text-align: center;
+    user-select: none;
+}
+
+h1 {
+    font-size: calc(1vw + 22px);
+}
+
+h2 {
+    font-size: calc(1vw + 10px);
+}
+
+#Python:hover,
+#CS:hover {
+    cursor: pointer;
+    font-style: italic;
+}
+
+#Python {
+    color: #eeff00;
+    text-decoration: underline;
+}
+
+#CS {
+    color: #004cbd;
+    text-decoration: underline;
+}
+
+#CurrentProject {
+    color: #009df8;
+    display: block;
+}
+
+#TopText {
+    text-align: center;
+    max-width: max-content;
+    align-content: center;
+    align-items: center;
+}

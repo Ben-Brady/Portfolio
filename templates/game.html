@@ -1,0 +1,47 @@
+<head>
+    <link media="screen" rel="stylesheet" href="{{ url_for('static', filename='css/Unity.css') }}">
+    <script>
+        Active = false;
+        function UnityInteraction() {
+            GameContainer = document.getElementById("unity-container");
+            if (GameContainer.style.opacity == 1){
+                Active = true;
+                GameContainer.style.opacity = 1;
+            }
+        }
+
+        function UnityExit() {
+            GameContainer = document.getElementById("unity-container");
+            GameCanvas = document.getElementById("unity-canvas");
+            Active = false
+            setTimeout(() =>{
+                if (!Active){
+                    GameCanvas.
+                    GameContainer.style.opacity = 0
+                    
+                }
+            },1500)
+        }
+    </script>
+</head>
+<body>
+    <div id="unity-container" onmouseenter="UnityInteraction();" oninput="UnityInteraction();" onmouseleave="UnityExit();">
+        <div id="unity-border">
+            <canvas id="unity-canvas" aspect style="aspect-ratio: 16/9; width: 30vw; height: auto; background: #000000; z-index: 1;"></canvas>
+            <script src="{{ url_for('static', filename='Build/Build/Build.loader.js') }}"></script>
+            <script>
+            createUnityInstance(document.querySelector("#unity-canvas"), {
+                dataUrl: "{{ url_for('static', filename='Build/Build/Build.data.gz') }}",
+                frameworkUrl: "{{ url_for('static', filename='Build/Build/Build.framework.js.gz') }}",
+                codeUrl: "{{ url_for('static', filename='Build/Build/Build.wasm.gz') }}",
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "Ben Brady",
+                productName: "GenericPlatform",
+                productVersion: "1.0",
+                // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+                // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+            });
+            </script>
+        </div>
+    </div>
+</body>
