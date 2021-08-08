@@ -40,7 +40,7 @@ def GenerateClass(JSON:dict):
         return Create(JSON)
         
 def GenerateCommits():
-    r = requests.get('https://api.github.com/users/ThatGayKid/events',auth=AUTH)
+    r = requests.get('https://api.github.com/users/Ben-Brady/events',auth=AUTH)
     JSON = json.loads(r.text)
     
     for Event in JSON:

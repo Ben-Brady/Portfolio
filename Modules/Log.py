@@ -1,4 +1,5 @@
 import os
+import secrets
 import zlib
 import time
 import flask
@@ -29,10 +30,11 @@ with sqlite3.connect(DB) as conn:
 
 
 def LogVisit(req: flask.Request):
+    
     with sqlite3.connect(DB) as conn:
         conn.execute(
             "Insert into VISITS values(?,?,?)", (
-                int.from_bytes(os.urandom(4), 'big'),
+                secrets.randbelow(2**32),
                 int(time.time()),
                 zlib.crc32(req.remote_addr.encode())
             )
